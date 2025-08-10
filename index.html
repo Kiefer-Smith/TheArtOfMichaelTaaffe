@@ -1,101 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
-<div class="nav-bar">
-  <div id="menuToggle" class="toggle-menu active">
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-  </div>
-</div>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Side Menu Animation</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
 
-<div class="main">
-  <div id="sideMenu" class="side-menu">
-    <div class="mobile-search">
-      <form class="search-form">
-        <input autocomplete="off" class="search-input" placeholder="Search" type="search">
-        <button class="search-action" type="submit" value=""></button>
-      </form>
-    </div>
-
-    <div class="menu-items">
-      <a href="#" class="item">Home</a>
-      <a href="#" class="item">Dashboard</a>
-      <a href="#" class="item">Porject</a>
-      <a href="#" class="item">Earning</a>
-      <a href="#" class="item">Report</a>
-      <a href="#" class="item">Services</a>
-      <a href="#" class="item active">About</a>
-      <a href="#" class="item">Help</a>
-      <a href="#" class="item">contact</a>
+  <!-- Navbar -->
+  <div class="nav-bar">
+    <div id="menuToggle" class="toggle-menu active">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
     </div>
   </div>
 
-  <div class="content">
-    <h1> Side Menu with CSS New new Unic Design</h1>
-    <p>
-      Welcome to our all-in-one business management platform that simplifies the way you run your operations.
-      With a user-friendly interface and powerful features, you can streamline tasks, boost productivity, and
-      focus on what matters most - growing your business. From project management to financial insights, we've
-      got you covered. Our platform is designed to be intuitive and efficient, ensuring that you and your team
-      can adapt quickly and make the most out of every opportunity. Say goodbye to juggling multiple tools and
-      embrace a seamless experience that empowers you to take charge of your business with confidence.
-    </p>
+  <!-- Main content -->
+  <div class="main">
+    <!-- Side Menu -->
+    <div id="sideMenu" class="side-menu">
+      <div class="mobile-search">
+        <form class="search-form">
+          <input autocomplete="off" class="search-input" placeholder="Search" type="search">
+          <button class="search-action" type="submit" value=""></button>
+        </form>
+      </div>
 
-    <h2>Dashboard - Monitor Your Progress</h2>
-    <p>
-      Welcome to our user-friendly dashboard! Our platform provides you with a comprehensive overview of your projects,
-      earnings, and services all in one place. With our intuitive design, you can easily track your progress and stay on top
-      of your goals. Whether you're a freelancer, entrepreneur, or small business owner, this dashboard will be your go-to
-      tool for efficient management and growth. Access real-time data, visualize trends, and make informed decisions to take
-      your endeavors to the next level.
-    </p>
-    <h2>Project Management - Stay Organized and Productive</h2>
-    <p>
-      Manage your projects effortlessly using our powerful project management system. Create, assign, and track tasks with
-      ease. Collaborate with team members and clients, ensuring everyone stays on the same page. From planning to execution,
-      our platform streamlines the entire project lifecycle, making sure you deliver high-quality results on time. Take
-      advantage of progress tracking, deadlines, and milestone achievements. Embrace the project management revolution and
-      witness a new level of organization and productivity.
-    </p>
-    <h2>Earning and Service Insights - Boost Your Success</h2>
-    <p>
-      Your earnings and services are the heart of your business. With our detailed insights, you can analyze your income
-      streams, identify trends, and uncover lucrative opportunities. Understanding your earning patterns will empower you to
-      optimize your pricing, focus on high-demand services, and grow your revenue. Moreover, our platform offers valuable
-      assistance in highlighting your key strengths, suggesting improvements, and guiding you on the path to success. Let our
-      earning and service analytics become your most valuable allies on your journey towards prosperity.
-    </p>
-    <h2>Comprehensive Reports - Data at Your Fingertips</h2>
-    <p>
-      Accessing and understanding your performance is now easier than ever with our comprehensive reports. Generate detailed
-      reports that provide in-depth analyses of your earnings, project milestones, and service utilization. These reports
-      offer visual representations of your data, allowing you to quickly grasp your business's health and identify areas for
-      improvement. Whether you need a monthly overview or a specific time frame, our reports can be customized to fit your
-      needs. Stay informed, make data-driven decisions, and take charge of your business's growth with our powerful reporting
-      feature.
-    </p>
-    <h2>Help and Support - We've Got Your Back</h2>
-    <p>
-      We understand that sometimes you might need a helping hand or have questions. That's why our dedicated support team is
-      always ready to assist you. Whether you need technical guidance, have billing inquiries, or simply need advice on using
-      our platform effectively, we're here to help. You can reach out to us through various channels, including live chat,
-      email, or phone, and we'll promptly address your concerns. Your satisfaction and success are our top priorities, and our
-      support team is committed to ensuring you have a seamless and productive experience with our platform.
-    </p>
+      <div class="menu-items">
+        <a href="#" class="item">Home</a>
+        <a href="#" class="item">Dashboard</a>
+        <a href="#" class="item">Project</a>
+        <a href="#" class="item">Earning</a>
+        <a href="#" class="item">Report</a>
+        <a href="#" class="item">Services</a>
+        <a href="#" class="item active">About</a>
+        <a href="#" class="item">Help</a>
+        <a href="#" class="item">Contact</a>
+      </div>
+    </div>
+
+    <!-- Page content -->
+    <div class="content">
+      <h1>Side Menu with CSS & JS Animation</h1>
+      <p>This is a test page for the side menu animation from CodePen.</p>
+    </div>
   </div>
-</div>
 
-<!-- ***************************** 
-        Fllow
-     *****************************-->
-<div class="fllow">
-  <a href="#" class="youtube-button" title="Watch on Youtube">
-    <i class="ri-youtube-fill"></i>
-  </a>
-  <a href="#" class="external-link-button" title="See More">
-    <i class="ri-external-link-fill"></i>
-  </a>
-</div>
+  <!-- Floating buttons -->
+  <div class="fllow">
+    <a href="#" class="youtube-button" title="Watch on Youtube">
+      <i class="ri-youtube-fill"></i>
+    </a>
+    <a href="#" class="external-link-button" title="See More">
+      <i class="ri-external-link-fill"></i>
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
