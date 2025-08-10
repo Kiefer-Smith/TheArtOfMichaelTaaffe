@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>The Art of Michael Taaffe</title>
+<title>Celtic Style Sidebar</title>
+<!-- Link to Google Fonts for a more Celtic-inspired font -->
+<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
 <style>
   body {
     margin: 0;
@@ -11,7 +13,7 @@
     background-color: #f0f0f0;
   }
 
-  /* Sidebar styles */
+  /* Sidebar styles with Celtic background pattern */
   .sidebar {
     width: 250px;
     height: 100vh;
@@ -19,29 +21,26 @@
     color: #ecf0f1;
     padding: 20px;
     box-sizing: border-box;
-    font-family: 'Goudy Bookletter 1911', serif;
-    /* Example pattern overlay for Celtic feel */
-    background-image: repeating-linear-gradient(
-      45deg,
-      #2c3e50,
-      #2c3e50 10px,
-      #34495e 10px,
-      #34495e 20px
-    );
-    /* Optional: add Celtic knot border or pattern using background images or SVGs */
+    /* Celtic knot pattern as background - replace URL with your own pattern image if desired */
+    background-image: 
+      url('https://www.transparenttextures.com/patterns/celtic-knot.png'), 
+      linear-gradient(45deg, #2c3e50, #34495e);
+    background-repeat: repeat, no-repeat;
+    background-size: auto, cover;
     border-right: 4px solid #16a085;
   }
 
-  /* Header */
+  /* Header styles with Celtic font */
   .sidebar h2 {
     text-align: center;
     margin-bottom: 30px;
     font-family: 'Uncial Antiqua', cursive;
     font-size: 2em;
     color: #f39c12;
+    text-shadow: 1px 1px 2px #000;
   }
 
-  /* Navigation links */
+  /* Navigation styles */
   .nav {
     list-style: none;
     padding: 0;
@@ -61,7 +60,7 @@
     transition: all 0.3s;
   }
 
-  /* Celtic inspired hover effect */
+  /* Celtic-inspired hover effect */
   .nav a:hover {
     background-color: #16a085;
     border-left: 4px solid #f39c12;
@@ -72,21 +71,20 @@
 <body>
 
 <div class="sidebar">
-  <h2>The Art of Michael Taaffe</h2>
+  <h2>Celtic Menu</h2>
   <ul class="nav">
+    <li><a href="#">Home</a></li>
     <li><a href="#">About</a></li>
-    <li><a href="#">Gallery</a></li>
-    <li><a href="#">Shop</a></li>
-    <li><a href="#">Reviews</a></li>
-    <li><a href="#">Join Newsletter</a></li>
-    <li><a href="#">Support The Artist</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Portfolio</a></li>
+    <li><a href="#">Contact</a></li>
   </ul>
 </div>
 
 <!-- Main content area -->
 <div style="margin-left: 250px; padding: 20px;">
   <h1>Welcome to the Celtic Style Sidebar Page</h1>
-  <p>This is a simple webpage with a Celtic-inspired sidebar.</p>
+  <p>This is a simple webpage with a Celtic-inspired sidebar featuring a Celtic knot background pattern.</p>
 </div>
 
 </body>
