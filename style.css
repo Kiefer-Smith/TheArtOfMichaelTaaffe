@@ -18,12 +18,12 @@ body {
   top: 0;
   left: 0;
   height: 100%;
-  width: 350px;
+  width: 150px;
   display: flex;
   overflow-x: hidden;
   flex-direction: column;
   background: #044400;
-  padding: 25px 20px;
+  padding: 125px 120px;
 }
 
 
