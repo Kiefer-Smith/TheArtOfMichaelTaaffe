@@ -3,7 +3,7 @@
 
 * {
   margin: 0;
-  padding: 0;
+  padding: 150;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
@@ -22,7 +22,7 @@ body {
   display: flex;
   overflow-x: hidden;
   flex-direction: column;
-  background: #161a2d;
+  background: #044400;
   padding: 25px 20px;
 }
 
@@ -100,7 +100,7 @@ body {
 }
 
 .sidebar-links li a:hover {
-  color: #161a2d;
+  color: #d7e600d7;
   background: #fff;
   border-radius: 4px;
 }
