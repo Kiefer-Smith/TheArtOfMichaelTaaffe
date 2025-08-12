@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    font-family: 'Uncial Antiqua', cursive;
+    background: url('https://www.transparenttextures.com/patterns/parchment.png');
+    color: #2f3e1d;
+}
+
+/* Celtic gold animation */
+@keyframes shimmer {
+    0% { background-position: -200px 0; }
+    100% { background-position: 200px 0; }
+}
+
+header {
+    background: linear-gradient(90deg, #014421, #228B22);
+    color: #ffd700;
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 12px solid transparent;
+    border-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4f/Celtic_knot_border.svg') 30 round;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    background-size: 400px 100%;
+    animation: shimmer 3s infinite linear;
+}
+
+.container {
+    display: flex;
+    background: rgba(255, 255, 255, 0.8);
+    border-left: 12px solid transparent;
+    border-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4f/Celtic_knot_border.svg') 30 round;
+}
+
+.sidebar {
+    width: 220px;
+    background: #014421 url('https://www.transparenttextures.com/patterns/green-dust-and-scratches.png');
+    border-right: 12px solid transparent;
+    border-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4f/Celtic_knot_border.svg') 30 round;
+    min-height: 100vh;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    border-bottom: 1px solid #ffd700;
+}
+
+.sidebar a {
+    display: block;
+    color: #ffd700;
+    padding: 0.75rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar a:hover {
+    background-color: #228B22;
+}
+
+.content {
+    flex: 1;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-left: 8px solid #ffd700;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+    }
+}
