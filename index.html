@@ -41,17 +41,20 @@ header {
 }
 
 .sidebar {
-    background-color: #064f2f; /* your green */
     width: 220px;
-    min-height: 100vh;         /* full height of viewport */
+    background: #014421 url('https://www.transparenttextures.com/patterns/green-dust-and-scratches.png');
+    border-right: 12px solid transparent;
+    border-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4f/Celtic_knot_border.svg') 30 round;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;   /* centers content vertically */
-    align-items: center;       /* centers horizontally */
+    justify-content: center; /* centers vertically */
+    height: 100vh; /* full height of viewport */
 }
 
+
 .logo-container img {
-    max-width: 120px; /* control logo size */
+    max-width: 20px; /* control logo size */
     height: auto;
     margin-bottom: 30px; /* space below logo */
 }
@@ -65,13 +68,6 @@ header {
 .sidebar li {
     border-bottom: 1px solid #ffd700;
      margin-top: 35px; /* space between items */
-}
-
-.nav-links {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    text-align: center;
 }
 
 .sidebar a {
@@ -109,20 +105,23 @@ header {
         <h1>☘ The Art of Michael Taaffe ☘</h1>
     </header>
 
-   <div class="sidebar">
-    <div class="logo-container">
-        <img src="Images/logo-sample.png" alt="Logo">
+    <div class="container">
     </div>
-    <nav class="nav-links">
-        <a href="#">About</a>
-        <a href="#">Gallery</a>
-        <a href="#">Prints Available Here</a>
-        <a href="#">Tees, Mugs, Etc Available Here</a>
-        <a href="#">Reviews</a>
-        <a href="#">Join Newsletter</a>
-        <a href="#">Support The Artist</a>
-    </nav>
-</div>
+        <aside class="sidebar">
+            <img src="Images/LogoSample.png" alt="Logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                    <li><a href="https://www.inprnt.com/gallery/michael_taaffe_art/">Prints Available Here</a></li>
+                    <li><a href="https://www.redbubble.com/people/morinehtar/shop?asc=u">Tees,Mugs,Etc Available Here</a></li>
+                    <li><a href="Reviews.html">Reviews</a></li>
+                    <li><a href="Join Newsletter.html">Join Newsletter</a></li>
+                    <li><a href="https://steady.page/en/the-art-of-michael-taaffe/about#js-publication_plans">Support The Artist</a></li>
+                </ul>
+            </nav>
+        </aside>
+
         <main class="content">
             <h2>Welcome to the Celtic World</h2>
             <p>
