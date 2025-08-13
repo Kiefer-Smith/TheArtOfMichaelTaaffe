@@ -15,18 +15,14 @@
 }
 
 
-header {
-    border-image: url('/Images/celticknot.png') 30 round;
-    color: #ffd700;
-    text-align: center;
-    padding: 1rem;
-    border-bottom: 12px solid transparent;
-    border-image: url('/Images/celticknot.png') 30 round;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-    background-size: 400px 100%;
-    animation: shimmer 3s infinite linear;
+.header-image {
+    display: block;
+    width: 100%;          /* Make it responsive and fill the container width */
+    max-width: 800px;     /* Set a maximum width for large screens */
+    height: auto;         /* Maintain aspect ratio */
+    margin: 0 auto;       /* Center the image horizontally */
+    padding: 10px 0;      /* Optional: some padding around the image */
 }
-
 .container {
     display: flex;
     background: rgba(255, 255, 255, 0.8);
