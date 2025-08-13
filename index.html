@@ -1,100 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>The Art of Michael Taffe</title>
-<style>
-  body {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celtic Theme Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    body {
     margin: 0;
-    font-family: Arial, sans-serif;
-  }
-  /* Header styles */
-  header {
-    background-color: #006400; /* Dark Green */
-    color: yellow;
-    padding: 10px;
+    font-family: 'Uncial Antiqua', cursive;
+    background: url('https://www.transparenttextures.com/patterns/parchment.png');
+    color: #2f3e1d;
+}
+
+/* Celtic gold animation */
+@keyframes shimmer {
+    0% { background-position: -200px 0; }
+    100% { background-position: 200px 0; }
+}
+
+header {
+    background: linear-gradient(90deg, #014421, #228B22);
+    color: #ffd700;
     text-align: center;
-  }
-  header h1 {
-    margin: 0;
-    font-family: 'Papyrus', cursive;
-  }
-  /* Container for main content and sidebar */
-  .container {
+    padding: 1rem;
+    border-bottom: 12px solid transparent;
+    border-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4f/Celtic_knot_border.svg') 30 round;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    background-size: 400px 100%;
+    animation: shimmer 3s infinite linear;
+}
+
+.container {
     display: flex;
-    flex-direction: row;
-  }
-  /* Left sidebar styles */
-  .sidebar-left {
-    background-color: #006400; /* Dark Green */
-    color: yellow;
-    width: 20%;
-    padding: 10px;
-  }
-  /* Main content styles */
-  .main {
-    background-color: #FFFFFF; /* White */
-    width: 50%;
-    padding: 10px;
-  }
-  /* Right sidebar styles for products */
-  .sidebar-right {
-    background-color: #F0F0F0; /* Light Gray */
-    width: 30%;
-    padding: 10px;
-  }
-  /* Navigation list styles */
-  .sidebar-left ul {
-    list-style-type: none;
+    background: rgba(255, 255, 255, 0.8);
+    border-left: 0px solid transparent;
+    border-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4f/Celtic_knot_border.svg') 30 round;
+}
+
+.sidebar {
+    width: 220px;
+    background: #014421 url('https://www.transparenttextures.com/patterns/green-dust-and-scratches.png');
+    border-right: 12px solid transparent;
+    border-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4f/Celtic_knot_border.svg') 30 round;
+    min-height: 100vh;
+    padding-top: 55px; /* pushes everything down */
+}
+
+.sidebar ul {
+    list-style: none;
     padding: 0;
-  }
-  .sidebar-left li {
-    margin: 10px 0;
-  }
-  /* Heading styles */
-  h2 {
-    font-family: 'Papyrus', cursive;
-  }
+    margin: 0;
+}
+
+.sidebar li {
+    border-bottom: 1px solid #ffd700;
+     margin-top: 25px; /* space between items */
+}
+
+.sidebar a {
+    display: block;
+    color: #ffd700;
+    padding: 0.75rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar a:hover {
+    background-color: #228B22;
+}
+
+.content {
+    flex: 1;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-left: 8px solid #ffd700;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+    }
+}
 </style>
 </head>
 <body>
+    <header>
+        <h1>☘ The Art of Michael Taaffe ☘</h1>
+    </header>
 
-<header>
-  <h1>★ The Art of Michael Taffe ★</h1>
-</header>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                    <li><a href="https://www.inprnt.com/gallery/michael_taaffe_art/">Prints Available Here</a></li>
+                    <li><a href="https://www.redbubble.com/people/morinehtar/shop?asc=u">Tees,Mugs,Etc Available Here</a></li>
+                    <li><a href="Reviews.html">Reviews</a></li>
+                    <li><a href="Join Newsletter.html">Join Newsletter</a></li>
+                    <li><a href="https://steady.page/en/the-art-of-michael-taaffe/about#js-publication_plans">Support The Artist</a></li>
+                </ul>
+            </nav>
+        </aside>
 
-<div class="container">
-  <!-- Left Navigation Sidebar -->
-  <nav class="sidebar-left">
-    <ul>
-      <li><a href="#about" style="color:yellow;">About</a></li>
-      <li><a href="#gallery" style="color:yellow;">Gallery</a></li>
-      <li><a href="#prizes" style="color:yellow;">Prizes Available Here</a></li>
-      <li><a href="#tees" style="color:yellow;">Tees, Mugs, Etc Available Here</a></li>
-      <li><a href="#reviews" style="color:yellow;">Reviews</a></li>
-      <li><a href="#newsletter" style="color:yellow;">Join Newsletter</a></li>
-      <li><a href="#support" style="color:yellow;">Support The Artist</a></li>
-    </ul>
-  </nav>
-
-  <!-- Main Content Area -->
-  <main class="main">
-    <h2>Welcome to the Celtic World</h2>
-    <p>Information will be posted here about the artist.</p>
-  </main>
-
-  <!-- Right Sidebar for Available Products -->
-  <aside class="sidebar-right">
-    <h2 style="font-family:'Papyrus', cursive;">Available Products</h2>
-    <ul>
-      <li><a href="https://example.com/product1" target="_blank">Product 1</a></li>
-      <li><a href="https://example.com/product2" target="_blank">Product 2</a></li>
-      <li><a href="https://example.com/product3" target="_blank">Product 3</a></li>
-      <li><a href="https://example.com/product4" target="_blank">Product 4</a></li>
-    </ul>
-  </aside>
-</div>
-
+        <main class="content">
+            <h2>Welcome to the Celtic World</h2>
+            <p>
+                Information will be posted here about the artist.
+            </p>
+        </main>
+    </div>
 </body>
 </html>
