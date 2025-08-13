@@ -71,6 +71,38 @@ header {
     background-color: #228B22;
 }
 
+.sidebar-right {
+    width: 220px;
+    background: #014421 url('https://www.transparenttextures.com/patterns/green-dust-and-scratches.png');
+    border-right: 12px solid transparent;
+    border-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4f/Celtic_knot_border.svg') 30 round;
+    min-height: 100vh;
+    padding-top: 55px; /* pushes everything down */
+}
+
+.sidebar-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-right li {
+    border-bottom: 1px solid #ffd700;
+     margin-top: 25px; /* space between items */
+}
+
+.sidebar-right a {
+    display: block;
+    color: #ffd700;
+    padding: 0.75rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-right a:hover {
+    background-color: #228B22;
+}
+
 .content {
     flex: 1;
     padding: 2rem;
