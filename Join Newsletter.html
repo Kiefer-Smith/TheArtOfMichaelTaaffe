@@ -1,96 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>The Art of Michael Taaffe</title>
-<!-- Link to Google Fonts for a more Celtic-inspired font -->
-<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
-<style>
-  body {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Art of Michael Taaffe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    body {
     margin: 0;
-    font-family: 'Georgia', serif;
-    background-color: #f0f0f0;
-  }
-
-  /* Sidebar styles with Celtic background pattern */
-  .sidebar {
-    width: 250px;
-    height: 100vh;
-    background-color: #003a06;
-    font-family: 'Georgia', serif;
-    color: #ecf0f1;
-    padding: 20px;
-    box-sizing: border-box;
-    /* Celtic knot pattern as background - replace URL with your own pattern image if desired */
-    background-image: 
-      url('https://www.transparenttextures.com/patterns/celtic-knot.png'), 
-      linear-gradient(45deg, #003a06, #003a06);
-    background-repeat: repeat, no-repeat;
-    background-size: auto, cover;
-    border-right: 4px solid #f39c12;
-  }
-
-  /* Header styles with Celtic font */
-  .sidebar h2 {
-    text-align: center;
-    margin-bottom: 100px;
     font-family: 'Uncial Antiqua', cursive;
-    font-size: 2em;
-    color: #ffffff;
-    text-shadow: 1px 1px 2px #000;
-  }
+    background: url('https://www.transparenttextures.com/patterns/parchment.png');
+    color: #2f3e1d;
+}
 
-  /* Navigation styles */
-  .nav {
+
+.header-image {
+    display: block;
+    width: 100%;          /* Make it responsive and fill the container width */
+    max-width: 800px;     /* Set a maximum width for large screens */
+    height: 400px;         /* Maintain aspect ratio */
+    margin: 0 auto;       /* Center the image horizontally */
+    padding: 0px 0;      /* Optional: some padding around the image */
+}
+.container {
+    display: flex;
+    background: rgba(255, 255, 255, 0.8);
+    border-left: 0px solid transparent;
+    border-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4f/Celtic_knot_border.svg') 30 round;
+}
+
+
+
+
+.sidebar {
+    width: 220px;
+    background: #014421 url('https://www.transparenttextures.com/patterns/green-dust-and-scratches.png');
+    border-right: 12px solid transparent;
+    border-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4f/Celtic_knot_border.svg') 30 round;
+    min-height: 100vh;
+    padding-top: 55px; /* pushes everything down */
+}
+
+.sidebar ul {
     list-style: none;
     padding: 0;
-  }
+    margin: 0;
+}
 
-  .nav li {
-    margin: 15px 0;
-  }
+.sidebar li {
+    border-bottom: 1px solid #ffd700;
+     margin-top: 25px; /* space between items */
+}
 
-  .nav a {
-    text-decoration: none;
-    color: #ecf0f1;
-     font-family: 'Georgia', serif;
-    font-size: 1.2em;
-    padding: 10px 15px;
+.sidebar a {
     display: block;
-    border-left: 4px solid transparent;
-    transition: all 0.3s;
+    color: #ffd700;
+    padding: 0.75rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar a:hover {
+    background-color: #228B22;
+}
+
+.sidebar-right {
+    width: 220px;
+    background: #014421 url('https://www.transparenttextures.com/patterns/green-dust-and-scratches.png');
+    border-left: 8px solid #ffd700; /* yellow border on the left side */
+    border-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4f/Celtic_knot_border.svg') 30 round;
+    min-height: 100vh;
+    padding-top: 55px; /* pushes everything down */
+}
+
+.sidebar-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-right li {
+    border-bottom: 1px solid #ffd700;
+     margin-top: 25px; /* space between items */
+}
+
+.sidebar-right a {
+    display: block;
+    color: #ffd700;
+    padding: 0.75rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-right a:hover {
+    background-color: #228B22;
+}
+
+.content {
+    flex: 1;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-left: 8px solid #ffd700;
+}
+
+.header {
+    background-color: #232439;
+    padding: 4rem 2rem;
+    text-align: center;
+    
+    a {
+      margin-top: 1rem;
+      display: block;
+      color: #6ddce5;
+      font-size: 0.85rem;
+      text-decoration: none;
+    }
   }
 
-  /* Celtic-inspired hover effect */
-  .nav a:hover {
-    background-color: #16a085;
-    border-left: 4px solid #f39c12;
-    padding-left: 20px;
+  .header__title {
+    margin: 0;
+    color: #fff;
+    font-weight: 300;
   }
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+    }
+}
 </style>
 </head>
 <body>
+   <header class="header">
+  <h1 class="header__title">The Art of Michael Taaffe</h1>
+</header>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                    <li><a href="https://www.inprnt.com/gallery/michael_taaffe_art/">Prints Available Here</a></li>
+                    <li><a href="https://www.redbubble.com/people/morinehtar/shop?asc=u">Tees,Mugs,Etc Available Here</a></li>
+                    <li><a href="Reviews.html">Reviews</a></li>
+                    <li><a href="Join Newsletter.html">Join Newsletter</a></li>
+                    <li><a href="https://steady.page/en/the-art-of-michael-taaffe/about#js-publication_plans">Support The Artist</a></li>
+                </ul>
+            </nav>
+        </aside>
 
-<div class="sidebar">
-  <h2>The Art of Michael Taaffe</h2>
-  <ul class="nav">
-    <li><a href="index.html">About</a></li>
-    <li><a href="Gallery.html">Gallery</a></li>
-    <li><a href="#">Shop</a></li>
-    <li><a href="Reviews.html">Reviews</a></li>
-    <li><a href="Join Newsletter.html">Join Newsletter</a></li>
-    <li><a href="https://steady.page/en/the-art-of-michael-taaffe/about#js-publication_plans">Support the Artist</a></li>
-  </ul>
+        <main class="content">
+            <h2>Welcome to the Celtic World</h2>
+            <p>
+                Information will be posted here about the artist.
+            </p>
+        </main>
 
-  
+        <!-- Right Sidebar for Available Products -->
+  <aside class="sidebar-right">
+    <h2 style="font-family:'Papyrus', cursive;">Available Products</h2>
+    <ul>
+      <li><a href="https://example.com/product1" target="_blank">Product 1</a></li>
+      <li><a href="https://example.com/product2" target="_blank">Product 2</a></li>
+      <li><a href="https://example.com/product3" target="_blank">Product 3</a></li>
+      <li><a href="https://example.com/product4" target="_blank">Product 4</a></li>
+    </ul>
+  </aside>
 </div>
-
-<!-- Main content area -->
-  <h1>Welcome to the Celtic Style Sidebar Page</h1>
-  <p>This is a simple webpage with a Celtic-inspired sidebar featuring a Celtic knot background pattern.</p>
-</div>
-
+    </div>
 </body>
 </html>
-
