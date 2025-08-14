@@ -7,53 +7,96 @@
 <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
 <style>
 /* === Your Celtic Layout Styles === */
-body {
+ body {
     margin: 0;
     font-family: 'Uncial Antiqua', cursive;
     background: url('https://www.transparenttextures.com/patterns/parchment.png');
     color: #2f3e1d;
 }
-.header {
-    background-color: #232439;
-    padding: 2rem;
-    text-align: center;
-}
-.header__title {
-    margin: 0;
-    color: #fff;
-    font-weight: 300;
+
+
+.header-image {
+    display: block;
+    width: 100%;          /* Make it responsive and fill the container width */
+    max-width: 800px;     /* Set a maximum width for large screens */
+    height: 400px;         /* Maintain aspect ratio */
+    margin: 0 auto;       /* Center the image horizontally */
+    padding: 0px 0;      /* Optional: some padding around the image */
 }
 .container {
     display: flex;
     background: rgba(255, 255, 255, 0.8);
+    border-left: 0px solid transparent;
+    border-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4f/Celtic_knot_border.svg') 30 round;
 }
-.sidebar, .sidebar-right {
+
+
+
+
+.sidebar {
     width: 220px;
     background: #014421 url('https://www.transparenttextures.com/patterns/green-dust-and-scratches.png');
+    border-right: 12px solid transparent;
     border-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4f/Celtic_knot_border.svg') 30 round;
     min-height: 100vh;
-    padding-top: 20px;
+    padding-top: 55px; /* pushes everything down */
 }
-.sidebar {
-    border-right: 12px solid transparent;
-}
-.sidebar-right {
-    border-left: 8px solid #ffd700;
-}
-.sidebar ul, .sidebar-right ul {
+
+.sidebar ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-.sidebar a, .sidebar-right a {
+
+.sidebar li {
+    border-bottom: 1px solid #ffd700;
+     margin-top: 25px; /* space between items */
+}
+
+.sidebar a {
     display: block;
     color: #ffd700;
     padding: 0.75rem;
     text-decoration: none;
+    transition: background-color 0.3s ease;
 }
-.sidebar a:hover, .sidebar-right a:hover {
+
+.sidebar a:hover {
     background-color: #228B22;
 }
+
+.sidebar-right {
+    width: 220px;
+    background: #014421 url('https://www.transparenttextures.com/patterns/green-dust-and-scratches.png');
+    border-left: 8px solid #ffd700; /* yellow border on the left side */
+    border-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4f/Celtic_knot_border.svg') 30 round;
+    min-height: 100vh;
+    padding-top: 55px; /* pushes everything down */
+}
+
+.sidebar-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-right li {
+    border-bottom: 1px solid #ffd700;
+     margin-top: 25px; /* space between items */
+}
+
+.sidebar-right a {
+    display: block;
+    color: #ffd700;
+    padding: 0.75rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-right a:hover {
+    background-color: #228B22;
+}
+
 .content {
     flex: 1;
     padding: 2rem;
@@ -192,13 +235,18 @@ body {
             </article>
         </section>
     </main>
-    <aside class="sidebar-right">
-        <h3>Available Products</h3>
-        <ul>
-            <li><a href="#">Product 1</a></li>
-        </ul>
-    </aside>
+           <!-- Right Sidebar for Available Products -->
+  <aside class="sidebar-right">
+    <h2 style="font-family:'Papyrus', cursive;">Available Products</h2>
+    <ul>
+      <li><a href="https://example.com/product1" target="_blank">Product 1</a></li>
+      <li><a href="https://example.com/product2" target="_blank">Product 2</a></li>
+      <li><a href="https://example.com/product3" target="_blank">Product 3</a></li>
+      <li><a href="https://example.com/product4" target="_blank">Product 4</a></li>
+    </ul>
+  </aside>
 </div>
+    </div>
 
 <!-- Lightbox -->
 <div class="lightbox" id="lightbox">
