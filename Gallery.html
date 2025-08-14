@@ -1,228 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Art of Michael Taaffe</title>
-    <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <style>
-    body {
-    margin: 0;
-    font-family: 'Uncial Antiqua', cursive;
-    background: url('https://www.transparenttextures.com/patterns/parchment.png');
-    color: #2f3e1d;
-}
-
-
-.header-image {
-    display: block;
-    width: 100%;          /* Make it responsive and fill the container width */
-    max-width: 800px;     /* Set a maximum width for large screens */
-    height: 400px;         /* Maintain aspect ratio */
-    margin: 0 auto;       /* Center the image horizontally */
-    padding: 0px 0;      /* Optional: some padding around the image */
-}
-.container {
-    display: flex;
-    background: rgba(255, 255, 255, 0.8);
-    border-left: 0px solid transparent;
-    border-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4f/Celtic_knot_border.svg') 30 round;
-}
-
-
-
-
-.sidebar {
-    width: 220px;
-    background: #014421 url('https://www.transparenttextures.com/patterns/green-dust-and-scratches.png');
-    border-right: 12px solid transparent;
-    border-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4f/Celtic_knot_border.svg') 30 round;
-    min-height: 100vh;
-    padding-top: 55px; /* pushes everything down */
-}
-
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.sidebar li {
-    border-bottom: 1px solid #ffd700;
-     margin-top: 25px; /* space between items */
-}
-
-.sidebar a {
-    display: block;
-    color: #ffd700;
-    padding: 0.75rem;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.sidebar a:hover {
-    background-color: #228B22;
-}
-
-.sidebar-right {
-    width: 220px;
-    background: #014421 url('https://www.transparenttextures.com/patterns/green-dust-and-scratches.png');
-    border-left: 8px solid #ffd700; /* yellow border on the left side */
-    border-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4f/Celtic_knot_border.svg') 30 round;
-    min-height: 100vh;
-    padding-top: 55px; /* pushes everything down */
-}
-
-.sidebar-right ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.sidebar-right li {
-    border-bottom: 1px solid #ffd700;
-     margin-top: 25px; /* space between items */
-}
-
-.sidebar-right a {
-    display: block;
-    color: #ffd700;
-    padding: 0.75rem;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.sidebar-right a:hover {
-    background-color: #228B22;
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 20px;
-  margin-top: 2rem;
-}
-
-.gallery article {
-  background: rgba(255, 255, 255, 0.85);
-  border: 4px solid #014421;
-  border-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4f/Celtic_knot_border.svg') 30 round;
-  padding: 10px;
-  text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.gallery article:hover {
-  transform: scale(1.03);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
-}
-
-.gallery img {
-  width: 100%;
-  height: auto;
-  border-bottom: 2px solid #ffd700;
-}
-
-.gallery h3 {
-  font-family: 'Uncial Antiqua', cursive;
-  color: #2f3e1d;
-  margin-top: 8px;
-  font-size: 1.1rem;
-}
-
-.content {
-    flex: 1;
-    padding: 2rem;
-    background: rgba(255, 255, 255, 0.9);
-    border-left: 8px solid #ffd700;
-}
-
-.header {
-    background-color: #232439;
-    padding: 4rem 2rem;
-    text-align: center;
-    
-    a {
-      margin-top: 1rem;
-      display: block;
-      color: #6ddce5;
-      font-size: 0.85rem;
-      text-decoration: none;
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Artwork Gallery</title>
+  <style>
+    :root{
+      --bg:#0f1115;
+      --card:#151821;
+      --text:#e7e9ee;
+      --muted:#a7adbb;
+      --accent:#7aa2ff;
+      --ring: rgba(122,162,255,.5);
+      --radius:14px;
+      --gap: clamp(12px, 2vw, 18px);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
     }
-  }
+    html,body{background:var(--bg); color:var(--text); font-family: system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif; margin:0}
+    .wrap{max-width:1200px; margin:auto; padding:clamp(16px,3vw,40px)}
+    header{display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:24px}
+    header h1{font-size:clamp(22px, 3vw, 32px); margin:0}
+    header a{color:var(--muted); text-decoration:none}
+    header a:hover{color:var(--text)}
 
-  .header__title {
-    margin: 0;
-    color: #fff;
-    font-weight: 300;
-  }
-
-
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
+    /* Gallery grid */
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr));
+      gap: var(--gap);
     }
-    .sidebar {
-        width: 100%;
-        min-height: auto;
+    .card{
+      background: var(--card);
+      border-radius: var(--radius);
+      overflow:hidden;
+      box-shadow: var(--shadow);
+      position:relative;
+      isolation:isolate;
     }
-}
-</style>
+    .card figure{margin:0; position:relative; aspect-ratio: 4/5; overflow:hidden}
+    .card img{
+      width:100%; height:100%; object-fit:cover; display:block; filter: saturate(1.05) contrast(1.02);
+      transition: transform .5s ease;
+      will-change: transform;
+    }
+    .card:hover img{ transform: scale(1.06) }
+    .overlay{
+      position:absolute; inset:0; display:flex; flex-direction:column; justify-content:flex-end;
+      background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,.65) 100%);
+      padding:16px; gap:10px; opacity:0; transition:opacity .25s ease;
+    }
+    .card:hover .overlay, .card:focus-within .overlay{opacity:1}
+    .title{font-weight:600; letter-spacing:.2px}
+    .meta{font-size:.9rem; color:var(--muted)}
+
+    .actions{display:flex; gap:10px; flex-wrap:wrap}
+    .btn, .ghost{
+      appearance:none; border:none; border-radius:10px; padding:10px 14px; font-weight:600; cursor:pointer;
+      text-decoration:none; display:inline-flex; align-items:center; gap:8px; transition: transform .06s ease, background .2s;
+      outline: none;
+    }
+    .btn{ background: var(--accent); color:#0b1020 }
+    .btn:hover{ transform: translateY(-1px) }
+    .ghost{ background: rgba(255,255,255,.08); color:var(--text) }
+    .ghost:hover{ background: rgba(255,255,255,.12) }
+
+    /* Focus ring */
+    .btn:focus-visible, .ghost:focus-visible, .card:focus-visible{
+      box-shadow: 0 0 0 4px var(--ring);
+    }
+
+    /* Lightbox */
+    .lightbox{
+      position: fixed; inset:0; background: rgba(5,7,12,.9); display:none;
+      align-items:center; justify-content:center; z-index: 1000; padding: clamp(10px, 3vw, 32px);
+    }
+    .lightbox.open{ display:flex }
+    .lb-img{
+      max-width: min(92vw, 1200px);
+      max-height: 85vh;
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+    }
+    .lb-ui{ position:fixed; inset-block: auto 16px; left:50%; transform: translateX(-50%); display:flex; gap:12px }
+    .icon-btn{
+      background: rgba(255,255,255,.12); color: white; border:1px solid rgba(255,255,255,.18);
+      border-radius: 999px; padding:10px 14px; cursor:pointer; font-weight:700;
+    }
+    .icon-btn:hover{ background: rgba(255,255,255,.18) }
+    .lb-close{ position:fixed; top:14px; right:14px }
+    @media (prefers-reduced-motion: reduce){
+      .card img{ transition:none }
+      .overlay{ transition:none }
+    }
+  </style>
 </head>
 <body>
-   <header class="header">
-  <h1 class="header__title">The Art of Michael Taaffe</h1>
-</header>
-    <div class="container">
-        <aside class="sidebar">
-            <nav>
-                <ul>
-                    <li><a href="index.html">About</a></li>
-                    <li><a href="Gallery.html">Gallery</a></li>
-                    <li><a href="https://www.inprnt.com/gallery/michael_taaffe_art/">Prints Available Here</a></li>
-                    <li><a href="https://www.redbubble.com/people/morinehtar/shop?asc=u">Tees,Mugs,Etc Available Here</a></li>
-                    <li><a href="Reviews.html">Reviews</a></li>
-                    <li><a href="Join Newsletter.html">Join Newsletter</a></li>
-                    <li><a href="https://steady.page/en/the-art-of-michael-taaffe/about#js-publication_plans">Support The Artist</a></li>
-                </ul>
-            </nav>
-        </aside>
+  <div class="wrap">
+    <header>
+      <h1>Gallery</h1>
+      <nav>
+        <a href="./index.html">Home</a>
+      </nav>
+    </header>
 
-        <main class="content">
-  <h2>Welcome to the Celtic World</h2>
-  <p>
-    Information will be posted here about the artist.
-  </p>
+    <!-- Grid -->
+    <section class="grid" id="gallery" aria-label="Artwork gallery">
+      <!-- Card template (duplicate and edit) -->
+      <article class="card">
+        <figure>
+          <img loading="lazy" src="assets/images/art1.jpg" alt="Sunlit Forest by A. Rivera" data-full="assets/images/art1.jpg">
+          <figcaption class="overlay">
+            <div>
+              <div class="title">Sunlit Forest</div>
+              <div class="meta">Oil on canvas · 60×80cm</div>
+            </div>
+            <div class="actions">
+              <a class="btn" href="https://etsy.com/" target="_blank" rel="noopener" aria-label="Buy Sunlit Forest on Etsy">Buy</a>
+              <button class="ghost view-btn" type="button" aria-label="View large image">View</button>
+            </div>
+          </figcaption>
+        </figure>
+      </article>
 
-  <section class="gallery">
-    <article>
-      <img src="images/art1.jpg" alt="Artwork 1">
-      <h3>Title of Artwork</h3>
-    </article>
-    <article>
-      <img src="images/art2.jpg" alt="Artwork 2">
-      <h3>Title of Artwork</h3>
-    </article>
-    <article>
-      <img src="images/art3.jpg" alt="Artwork 3">
-      <h3>Title of Artwork</h3>
-    </article>
-  </section>
-</main>
+      <article class="card">
+        <figure>
+          <img loading="lazy" src="assets/images/art2.jpg" alt="Midnight City by A. Rivera" data-full="assets/images/art2.jpg">
+          <figcaption class="overlay">
+            <div>
+              <div class="title">Midnight City</div>
+              <div class="meta">Acrylic · 50×70cm</div>
+            </div>
+            <div class="actions">
+              <a class="btn" href="https://shopify.com/" target="_blank" rel="noopener" aria-label="Buy Midnight City on Shopify">Buy</a>
+              <button class="ghost view-btn" type="button" aria-label="View large image">View</button>
+            </div>
+          </figcaption>
+        </figure>
+      </article>
 
-        <!-- Right Sidebar for Available Products -->
-  <aside class="sidebar-right">
-    <h2 style="font-family:'Papyrus', cursive;">Available Products</h2>
-    <ul>
-      <li><a href="https://example.com/product1" target="_blank">Product 1</a></li>
-      <li><a href="https://example.com/product2" target="_blank">Product 2</a></li>
-      <li><a href="https://example.com/product3" target="_blank">Product 3</a></li>
-      <li><a href="https://example.com/product4" target="_blank">Product 4</a></li>
-    </ul>
-  </aside>
-</div>
+      <article class="card">
+        <figure>
+          <img loading="lazy" src="assets/images/art3.jpg" alt="Ocean Haze by A. Rivera" data-full="assets/images/art3.jpg">
+          <figcaption class="overlay">
+            <div>
+              <div class="title">Ocean Haze</div>
+              <div class="meta">Watercolor · 30×40cm</div>
+            </div>
+            <div class="actions">
+              <a class="btn" href="https://redbubble.com/" target="_blank" rel="noopener" aria-label="Buy Ocean Haze on Redbubble">Buy</a>
+              <button class="ghost view-btn" type="button" aria-label="View large image">View</button>
+            </div>
+          </figcaption>
+        </figure>
+      </article>
+
+      <!-- Duplicate more <article class="card">…</article> as needed -->
+    </section>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <img class="lb-img" id="lbImg" alt="">
+    <button class="icon-btn lb-close" id="lbClose" aria-label="Close (Esc)">✕</button>
+    <div class="lb-ui" aria-hidden="true">
+      <button class="icon-btn" id="prevBtn" aria-label="Previous (←)">←</button>
+      <button class="icon-btn" id="nextBtn" aria-label="Next (→)">→</button>
     </div>
+  </div>
+
+  <script>
+    // LIGHTBOX LOGIC (no dependencies)
+    const cards = [...document.querySelectorAll('.card img')];
+    const lightbox = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lbImg');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const closeBtn = document.getElementById('lbClose');
+
+    let idx = -1;
+
+    function openLightbox(i){
+      idx = i;
+      const img = cards[idx];
+      lbImg.src = img.dataset.full || img.src;
+      lbImg.alt = img.alt || '';
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox(){
+      lightbox.classList.remove('open');
+      document.body.style.overflow = '';
+      lbImg.src = '';
+    }
+    function step(n){
+      idx = (idx + n + cards.length) % cards.length;
+      const img = cards[idx];
+      lbImg.src = img.dataset.full || img.src;
+      lbImg.alt = img.alt || '';
+    }
+
+    // Click handlers
+    document.querySelectorAll('.view-btn').forEach((btn, i)=>{
+      btn.addEventListener('click', ()=> openLightbox(i));
+    });
+    cards.forEach((img, i)=>{
+      img.addEventListener('click', ()=> openLightbox(i));
+      img.addEventListener('keydown', e=>{ if(e.key==='Enter') openLightbox(i); });
+      img.tabIndex = 0; // focusable
+    });
+
+    prevBtn.addEventListener('click', ()=> step(-1));
+    nextBtn.addEventListener('click', ()=> step(1));
+    closeBtn.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e)=>{ if(e.target===lightbox) closeLightbox(); });
+
+    // Keyboard
+    document.addEventListener('keydown', (e)=>{
+      if(!lightbox.classList.contains('open')) return;
+      if(e.key === 'Escape') closeLightbox();
+      if(e.key === 'ArrowLeft') step(-1);
+      if(e.key === 'ArrowRight') step(1);
+    });
+
+    // Optional: simple swipe (mobile)
+    let sx=0;
+    lightbox.addEventListener('touchstart', e=> sx = e.changedTouches[0].clientX, {passive:true});
+    lightbox.addEventListener('touchend', e=>{
+      const dx = e.changedTouches[0].clientX - sx;
+      if(Math.abs(dx) > 40) step(dx>0 ? -1 : 1);
+    }, {passive:true});
+  </script>
 </body>
 </html>
-
